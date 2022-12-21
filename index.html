@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="icon"
+      href="favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="./styles/style.css"
+    />
+    <title>Password Generator - Бесплатный генератор паралей online</title>
+  </head>
+  <body class="body">
+    <div class="container">
+      <h1 class="title">Бесплатный online генератор паролей</h1>
+      <p class="description">
+        Ищите надежный пароль? Просто выберите необходимые опции и нажмите кнопку сгенерировать,
+        приложение автоматически сформирует для вас надежный пароль. Мы не храним и не используем
+        ваши пароли, все пароли формируются рандомным генератором.
+      </p>
+      <div class="input-area">
+        <textarea
+          name="password-area"
+          id="password"
+          cols="30"
+          rows="10"
+          placeholder="Выбирите опции для генерации пароля"
+        ></textarea>
+        <button aria-label="скопировать пароль">Скопировать</button>
+      </div>
+      <div class="password-option">
+        <label for="count-password">Колличество символов</label>
+        <input
+          type="number"
+          id="count-password"
+        />
+        <br />
+        <label for="lower-case-simbols">
+          <input
+            type="checkbox"
+            name=""
+            id="lower-case-simbols"
+          />
+          Использовать строчные буквы </label
+        ><br />
+        <label for="upper-case-simbols">
+          <input
+            type="checkbox"
+            name=""
+            id="upper-case-simbols"
+          />
+          Использовать заглавные буквы </label
+        ><br />
+        <label for="number-simbols">
+          <input
+            type="checkbox"
+            name=""
+            id="number-simbols"
+          />
+          Использовать цифры </label
+        ><br />
+        <label for="spicial-simbols">
+          <input
+            type="checkbox"
+            name=""
+            id="spicial-simbols"
+          />
+          Использовать специальные символы </label
+        ><br />
+      </div>
+      <button>Сгенерировать пароль</button>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
