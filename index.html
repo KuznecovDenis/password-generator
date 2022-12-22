@@ -29,20 +29,19 @@
         ваши пароли, все пароли формируются рандомным генератором.
       </p>
       <div class="input-area">
-        <textarea
+        <input
           name="password-area"
           id="password"
-          cols="30"
-          rows="10"
           placeholder="Выбирите опции для генерации пароля"
-        ></textarea>
+        />
         <button aria-label="скопировать пароль">Скопировать</button>
       </div>
       <div class="password-option">
-        <label for="count-password">Колличество символов</label>
+        <label for="length-password">Колличество символов</label>
         <input
           type="number"
-          id="count-password"
+          id="length-password"
+          value="16"
         />
         <br />
         <label for="lower-case-simbols">
@@ -50,6 +49,7 @@
             type="checkbox"
             name=""
             id="lower-case-simbols"
+            checked="true"
           />
           Использовать строчные буквы </label
         ><br />
@@ -58,6 +58,7 @@
             type="checkbox"
             name=""
             id="upper-case-simbols"
+            checked="true"
           />
           Использовать заглавные буквы </label
         ><br />
@@ -66,6 +67,7 @@
             type="checkbox"
             name=""
             id="number-simbols"
+            checked="true"
           />
           Использовать цифры </label
         ><br />
@@ -74,11 +76,12 @@
             type="checkbox"
             name=""
             id="spicial-simbols"
+            checked="true"
           />
           Использовать специальные символы </label
         ><br />
       </div>
-      <button>Сгенерировать пароль</button>
+      <button class="generate-password">Сгенерировать пароль</button>
     </div>
     <script src="./scripts/script.js"></script>
   </body>
