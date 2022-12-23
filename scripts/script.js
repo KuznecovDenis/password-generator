@@ -10,7 +10,7 @@ const includesSimbols = document.getElementById('spicial-simbols');
 const LOVERCASE_CHAR = characterStringFromCharCode(97, 122);
 const UPPERCASE_CHAR = characterStringFromCharCode(65, 90);
 const NUMBER_CHAR = characterStringFromCharCode(48, 57);
-const SIMBOLS_CHAR = '!@#$%^&*';
+const SIMBOLS_CHAR = '!@#$%^&*~{}';
 // const SIMBOLS_CHAR = characterStringFromCharCode(33, 47)
 //   .concat(characterStringFromCharCode(58, 64))
 //   .concat(characterStringFromCharCode(91, 96))
