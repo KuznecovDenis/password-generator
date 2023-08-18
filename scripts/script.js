@@ -11,10 +11,6 @@ const LOVERCASE_CHAR = characterStringFromCharCode(97, 122);
 const UPPERCASE_CHAR = characterStringFromCharCode(65, 90);
 const NUMBER_CHAR = characterStringFromCharCode(48, 57);
 const SIMBOLS_CHAR = '!@#$%^&*~{}';
-// const SIMBOLS_CHAR = characterStringFromCharCode(33, 47)
-//   .concat(characterStringFromCharCode(58, 64))
-//   .concat(characterStringFromCharCode(91, 96))
-//   .concat(characterStringFromCharCode(123, 126));
 
 function characterStringFromCharCode(low, high) {
   const array = [];
@@ -55,4 +51,41 @@ generateBtn.addEventListener('click', () => {
     includesNumber,
     includesSimbols,
   );
+
+  navigator.clipboard.writeText(passwordArea.value);
 });
+
+
+const addBtn = document.querySelector('#plus_btn')
+const minusBtn = document.querySelector('#minus_btn')
+
+addBtn.addEventListener('click', () => {
+  let value = +lengthPassword.value
+
+  lengthPassword.value = value >= 30 ? value : value + 1
+})
+
+minusBtn.addEventListener('click', () => {
+  let value = +lengthPassword.value
+
+  lengthPassword.value = value <= 1 ? value : value - 1
+  
+})
+
+lengthPassword.addEventListener('input', e => {
+  let val = e.target.value 
+  if (val.length <= 2 ) {
+    e.target.value = val.replace(/\D/g, '')
+    if (val > 30) {
+      e.target.value = 30
+    }
+  } else {
+    e.target.value = 30
+  }
+  
+}) 
+
+document.getElementById("copy").onclick = function() {
+  const text = document.getElementById("password")
+  navigator.clipboard.writeText(text.value);
+}
